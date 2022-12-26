@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const Form = ({ setInputText, todos, setTodos, inputText, setStatus }) => {
+const Form = ({ inputText, setInputText, todos, setTodos, setStatus }) => {
     //Here I can write javascript code and function
     const inputTextHandler = (e) => {
         setInputText(e.target.value);
@@ -24,7 +24,7 @@ const Form = ({ setInputText, todos, setTodos, inputText, setStatus }) => {
             <i className="fas fa-plus-square"></i>
         </button>
         <div className="select">
-            <select onchange={statusHandler} name="todos" className="filter-todo">
+            <select onChange={statusHandler} name="todos" className="filter-todo">
                 <option value="all">All</option>
                 <option value="completed">Completed</option>
                 <option value="uncompleted">Uncompleted</option>
@@ -34,4 +34,4 @@ const Form = ({ setInputText, todos, setTodos, inputText, setStatus }) => {
     );
 }
 
-export default Form
+export default Form;
